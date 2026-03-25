@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Expense Tracker</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <h1 class="header__title">Expense Tracker</h1>
+      <p class="header__subtitle">Track your income and expenses</p>
+    </div>
+  </header>
+  <main class="main">
+    <div class="main__container">
+      <section class="summary">
+        <article class="summary__card">
+          <h2 class="summary__title">Balance</h2>
+          <p class="summary__text">$0.00</p>
+        </article>
+        <article class="summary__card">
+          <h2 class="summary__title">Income</h2>
+          <p class="summary__text">$0.00</p>
+        </article>
+        <article class="summary__card">
+          <h2 class="summary__title">Expenses</h2>
+          <p class="summary__text">$0.00</p>
+        </article>
+      </section>
+      <section class="filter">
+        <button type="button" class="filter__btn">All</button>
+        <button type="button" class="filter__btn">Income</button>
+        <button type="button" class="filter__btn">Expense</button>
+      </section>
+      <section class="transaction-adding">
+        <h2 class="transaction-adding__title">Add new transaction</h2>
+        <form class="transaction-adding__form">
+          <input type="text" name="title" placeholder="Title" class="transaction-adding__input">
+          <input type="number" name="amount" placeholder="Amount $" class="transaction-adding__input">
+          <select class="transaction-adding__select" name="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+          <button type="submit" class="transaction-adding__submit">Add transaction</button>
+        </form>
+      </section>
+      <section class="transactions">
+        <ul class="transactions__list">
+          <li class="transactions__item">
+            <span class="transactions__title">Salary</span>
+            <span class="transactions__amount">+1200</span>
+            <button type="button" class="transactions__delete">Delete</button>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
