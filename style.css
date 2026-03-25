@@ -7,3 +7,278 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  font-size: 10px;
+}
+
+
+.header {
+  width: 50%;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 1.5rem 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  color: #1f2a44;
+}
+
+.header__title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.header__subtitle {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+
+.main {
+  width: 100%;
+}
+
+.main__container {
+  width: 50%;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  padding: 1.5rem 2rem 3rem 2rem;
+  background-color: #f5f7fb;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.summary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0 2rem 0;
+}
+
+.summary__card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 0.8rem 2.4rem rgba(31, 42, 68, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.summary__title {
+  font-size: 1.6rem;
+}
+
+.summary__text {
+  font-size: 1.8rem;
+}
+
+
+.filter {
+  width: 100%;
+  display: flex;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.8rem 1rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+}
+
+.filter__btn {
+  border: none;
+  background: transparent;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  font-size: 1.4rem;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+.filter__btn--active {
+  background: #ffffff;
+  color: #1f2a44;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+.transaction-adding {
+  width: 100%;
+}
+
+.transaction-adding__add {
+  border: none;
+  background: linear-gradient(135deg, #8fb0d6, #9fc3d5);
+  color: #1f2a44;
+  padding: 1rem 1.8rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0.8rem 1.8rem rgba(31, 42, 68, 0.12);
+  margin-bottom: 1.5rem;
+}
+
+.transaction-adding__container {
+  margin-bottom: 2.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow:
+    0 0.8rem 2.4rem rgba(31, 42, 68, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    max-height 0.5s ease,
+    margin-bottom 0.5s ease,
+    padding 0.5s ease;
+}
+
+.transaction-adding__container.hidden {
+  opacity: 0;
+  transform: translateY(-1.5rem);
+  max-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-width: 0;
+}
+
+.transaction-adding__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1f2a44;
+  margin-bottom: 1.6rem;
+}
+
+.transaction-adding__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+
+.transaction-adding__submit {
+  grid-column: 1 / -1;
+}
+
+.transaction-adding__input,
+.transaction-adding__select {
+  width: 100%;
+  border: 1px solid rgba(31, 42, 68, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 1.2rem;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.5rem;
+  color: #1f2a44;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: base-select;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.transaction-adding__input:focus,
+.transaction-adding__select:focus {
+  border-color: #8fb0d6;
+  box-shadow: 0 0 0 0.4rem rgba(143, 176, 214, 0.18);
+}
+
+.transaction-adding__input::placeholder {
+  color: #7b879c;
+}
+
+.transaction-adding__submit {
+  border: none;
+  background: #2b3553;
+  color: #ffffff;
+  border-radius: 1.2rem;
+  padding: 1.3rem 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+.transactions {
+  width: 100%;
+}
+
+.transactions__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.transactions__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+
+  padding: 1.6rem 1.8rem 1.6rem 2.4rem;
+  border-radius: 1.8rem;
+
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 0.8rem 2rem rgba(31, 42, 68, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+
+  overflow: hidden;
+}
+
+.transactions__title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1f2a44;
+}
+
+.transactions__amount {
+  margin-left: auto;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #1f2a44;
+}
+
+.transactions__delete {
+  border: none;
+  background: rgba(31, 42, 68, 0.08);
+  color: #1f2a44;
+  padding: 0.9rem 1.2rem;
+  border-radius: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.transactions__item--income .transactions__amount {
+  color: #15803d;
+}
+
+.transactions__item--expense .transactions__amount {
+  color: #b91c1c;
+}

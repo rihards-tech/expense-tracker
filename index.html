@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script defer src="script.js"></script>
+  <script defer type="module" src="js/main.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Expense Tracker</title>
 </head>
@@ -31,27 +31,35 @@
         </article>
       </section>
       <section class="filter">
-        <button type="button" class="filter__btn">All</button>
+        <button type="button" class="filter__btn filter__btn--active">All</button>
         <button type="button" class="filter__btn">Income</button>
         <button type="button" class="filter__btn">Expense</button>
       </section>
       <section class="transaction-adding">
-        <h2 class="transaction-adding__title">Add new transaction</h2>
-        <form class="transaction-adding__form">
-          <input type="text" name="title" placeholder="Title" class="transaction-adding__input">
-          <input type="number" name="amount" placeholder="Amount $" class="transaction-adding__input">
-          <select class="transaction-adding__select" name="type">
-            <option value="income">Income</option>
-            <option value="expense">Expense</option>
-          </select>
-          <button type="submit" class="transaction-adding__submit">Add transaction</button>
-        </form>
+        <button type="button" class="transaction-adding__add">Add</button>
+        <div class="transaction-adding__container">
+          <h2 class="transaction-adding__title">New transaction</h2>
+          <form class="transaction-adding__form">
+            <input type="text" name="title" placeholder="Title" class="transaction-adding__input">
+            <input type="number" name="amount" placeholder="Amount $" class="transaction-adding__input">
+            <select class="transaction-adding__select" name="type">
+              <option value="income">Income</option>
+              <option value="expense">Expense</option>
+            </select>
+            <button type="submit" class="transaction-adding__submit">Add transaction</button>
+          </form>
+        </div>
       </section>
       <section class="transactions">
         <ul class="transactions__list">
-          <li class="transactions__item">
+          <li class="transactions__item transactions__item--income">
             <span class="transactions__title">Salary</span>
             <span class="transactions__amount">+1200</span>
+            <button type="button" class="transactions__delete">Delete</button>
+          </li>
+          <li class="transactions__item transactions__item--expense">
+            <span class="transactions__title">Food</span>
+            <span class="transactions__amount">-1200</span>
             <button type="button" class="transactions__delete">Delete</button>
           </li>
         </ul>
