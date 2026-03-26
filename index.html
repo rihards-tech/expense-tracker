@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script defer type="module" src="js/main.js"></script>
+  <script type="module" defer src="js/main.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Expense Tracker</title>
 </head>
@@ -37,12 +37,12 @@
       </section>
       <section class="transaction-adding">
         <button type="button" class="transaction-adding__add">Add</button>
-        <div class="transaction-adding__container">
+        <div class="transaction-adding__container hidden">
           <h2 class="transaction-adding__title">New transaction</h2>
           <form class="transaction-adding__form">
-            <input type="text" name="title" placeholder="Title" class="transaction-adding__input">
-            <input type="number" name="amount" placeholder="Amount $" class="transaction-adding__input">
-            <select class="transaction-adding__select" name="type">
+            <input type="text" name="title" placeholder="Title" id="titleInput" class="transaction-adding__input">
+            <input type="number" name="amount" placeholder="Amount $" id="amountInput" class="transaction-adding__input">
+            <select class="transaction-adding__select" name="type" id="selectInput">
               <option value="income">Income</option>
               <option value="expense">Expense</option>
             </select>
