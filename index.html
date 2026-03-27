@@ -41,7 +41,7 @@
           <h2 class="transaction-adding__title">New transaction</h2>
           <form class="transaction-adding__form">
             <input type="text" name="title" placeholder="Title" id="titleInput" class="transaction-adding__input">
-            <input type="number" name="amount" placeholder="Amount $" id="amountInput" class="transaction-adding__input">
+            <input type="number" name="amount" step="0.01" placeholder="Amount $" id="amountInput" class="transaction-adding__input">
             <select class="transaction-adding__select" name="type" id="selectInput">
               <option value="income">Income</option>
               <option value="expense">Expense</option>
@@ -52,7 +52,7 @@
       </section>
       <section class="transactions">
         <ul class="transactions__list">
-          <li class="transactions__item transactions__item--income">
+          <!-- <li class="transactions__item transactions__item--income">
             <span class="transactions__title">Salary</span>
             <span class="transactions__amount">+1200</span>
             <button type="button" class="transactions__delete">Delete</button>
@@ -61,7 +61,7 @@
             <span class="transactions__title">Food</span>
             <span class="transactions__amount">-1200</span>
             <button type="button" class="transactions__delete">Delete</button>
-          </li>
+          </li> -->
         </ul>
       </section>
     </div>

@@ -7,6 +7,7 @@ import {
   typeSelect
   } from "./selectors.js";
 import { state } from "./state.js";
+import { renderTransactions } from './render.js';
 
 export function setupFormToggle() {
   addButton.addEventListener('click', () => {
@@ -28,7 +29,7 @@ export function setupTransactionForm() {
     const type = typeSelect.value;
 
     if(!title || isNaN(amount)) {
-      console.log('Необходимо заполнить все поля!');
+      console.log('Fill all the gaps!');
       return;
     }
 
@@ -39,10 +40,12 @@ export function setupTransactionForm() {
       type,
     }
 
-    state.transactions = [...state.transactions, transaction];
+    state.transactions = [transaction, ...state.transactions];
 
     form.reset();
     formContainer.classList.add('hidden');
     addButton.textContent = 'Add';
+
+    renderTransactions();
   });
 }
