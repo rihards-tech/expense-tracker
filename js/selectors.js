@@ -3,6 +3,7 @@ export const formContainer = document.querySelector('.transaction-adding__contai
 export const form = document.querySelector('.transaction-adding__form');
 export const transactionsList = document.querySelector('.transactions__list');
 export const filterBtns = document.querySelectorAll('.filter__btn');
+export const filterIndicator = document.querySelector('.filter__indicator');
 
 export const titleInput = document.querySelector('#titleInput');
 export const amountInput = document.querySelector('#amountInput');
