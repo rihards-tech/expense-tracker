@@ -9,6 +9,7 @@ import {
 import { state } from "./state.js";
 import { renderTransactions } from './render.js';
 import { renderSummary } from './summary.js';
+import { saveTransactions } from './storage.js';
 
 export function setupFormToggle() {
   addButton.addEventListener('click', () => {
@@ -42,6 +43,7 @@ export function setupTransactionForm() {
     }
 
     state.transactions = [transaction, ...state.transactions];
+    saveTransactions();
 
     form.reset();
     formContainer.classList.add('hidden');
