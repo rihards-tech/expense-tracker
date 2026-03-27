@@ -12,7 +12,7 @@ export function renderTransactions() {
 
   state.transactions.forEach((transaction) => {
     const html = `
-      <li class="transactions__item transactions__item--${transaction.type}">
+      <li class="transactions__item transactions__item--${transaction.type}" data-id="${transaction.id}">
         <span class="transactions__title">${transaction.title}</span>
         <span class="transactions__amount">${transaction.type === 'income' ? '+' : '-'}$${transaction.amount.toLocaleString('fr-FR')}</span>
         <button type="button" class="transactions__delete">Delete</button>
