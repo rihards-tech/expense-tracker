@@ -8,6 +8,7 @@ import {
   } from "./selectors.js";
 import { state } from "./state.js";
 import { renderTransactions } from './render.js';
+import { renderSummary } from './summary.js';
 
 export function setupFormToggle() {
   addButton.addEventListener('click', () => {
@@ -47,5 +48,6 @@ export function setupTransactionForm() {
     addButton.textContent = 'Add';
 
     renderTransactions();
+    renderSummary();
   });
 }

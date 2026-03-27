@@ -79,6 +79,15 @@ html {
 
 .summary__text {
   font-size: 1.8rem;
+  font-weight: 600;
+}
+
+#summary-income {
+  color: #15803d;
+}
+
+#summary-expense {
+  color: #b91c1c;
 }
 
 
